@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { buildPageMetadata } from '@/lib/seo'
 import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 import { EditableLocalSignupForm } from '@/editable/components/EditableLocalAuthForms'
+import { pagesContent } from '@/editable/content/pages.content'
 import logo from '@/editable/assets/leventakinti-logo.png'
 
 export async function generateMetadata(): Promise<Metadata> {
