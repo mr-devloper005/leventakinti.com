@@ -6,7 +6,7 @@ import { EditableLocalSignupForm } from '@/editable/components/EditableLocalAuth
 import logo from '@/editable/assets/leventakinti-logo.png'
 
 export async function generateMetadata(): Promise<Metadata> {
-  return buildPageMetadata({ path: '/signup', title: 'Sign up', description: 'Local signup page for this public site.' })
+  return buildPageMetadata({ path: '/signup', title: 'Sign up', description: pagesContent.auth.signup.metadataDescription })
 }
 
 export default function SignupPage() {

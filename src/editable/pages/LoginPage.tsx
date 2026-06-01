@@ -6,7 +6,7 @@ import { EditableLocalLoginForm } from '@/editable/components/EditableLocalAuthF
 import logo from '@/editable/assets/leventakinti-logo.png'
 
 export async function generateMetadata(): Promise<Metadata> {
-  return buildPageMetadata({ path: '/login', title: 'Login', description: 'Local login page for this public site.' })
+  return buildPageMetadata({ path: '/login', title: 'Login', description: pagesContent.auth.login.metadataDescription })
 }
 
 export default function LoginPage() {
