@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Bookmark, Clock3, ExternalLink, Facebook, Mail, MessageCircle, Phone, PinIcon, Share2, ThumbsUp } from 'lucide-react'
+import { Bookmark, ExternalLink, Mail, MessageCircle, Phone } from 'lucide-react'
 import { buildPostMetadata, buildTaskMetadata } from '@/lib/seo'
 import { buildPostUrl, fetchArticleComments, fetchTaskPostBySlug, fetchTaskPosts } from '@/lib/task-data'
 import { getTaskConfig, type TaskKey } from '@/lib/site-config'
@@ -227,7 +227,7 @@ function RelatedPanel({ task, related }: { task: TaskKey; related: SitePost[] })
     <section className="mt-12">
       <h2 className="mb-5 text-center text-2xl font-extrabold">Latest</h2>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {related.slice(0, 3).map((post, index) => {
+        {related.slice(0, 3).map((post) => {
           const image = getImages(post)[0] || '/placeholder.svg?height=650&width=900'
           return (
             <Link key={post.id || post.slug} href={buildPostUrl(task, post.slug)} className="overflow-hidden rounded border border-[#dfe4ea] bg-white">

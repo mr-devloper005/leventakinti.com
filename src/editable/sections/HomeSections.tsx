@@ -111,7 +111,7 @@ export function EditableMagazineSplit({ primaryTask, primaryRoute, posts }: Home
             <Link href={primaryRoute} className="hidden text-sm text-[#333] hover:text-blue-700 sm:block">View All</Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {latest.map((post, index) => (
+            {latest.map((post) => (
               <Link key={post.id || post.slug} href={postHref(primaryTask, post, primaryRoute)} className="group overflow-hidden rounded border border-[#dfe4ea] bg-white transition hover:-translate-y-0.5 hover:shadow-sm">
                 <div className="flex h-[200px] items-center justify-center border-b border-[#e7ebef] bg-white p-4">
                   <img src={getEditablePostImage(post)} alt={post.title} className="max-h-full max-w-full object-contain" />
